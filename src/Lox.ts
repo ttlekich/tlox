@@ -5,10 +5,10 @@ let hadError = false;
 
 (function main() {
     const args = process.argv.slice(2);
-    if (args.length > 1) {
+    if (args.length < 1) {
         console.log("Usage: tlox [script]");
         process.exit(64);
-    } else if (args.length === 0) {
+    } else if (args.length === 1) {
         runFile(args[0]);
     } else {
         runPrompt();
